@@ -24,7 +24,7 @@ for i in lsAlphabet:
             if  k not in i:
                 break   
             pt += (i[(i.index(k) - j) % len(i)])
-        if 'KCSC{y0u_be4t_My_C3A5' in pt and len(pt) == len(ct):
+        if 'KCSC{y0u_be4t_My_C3A54R' in pt and len(pt) == len(ct):
             ls.append(pt)
 
 flag = set(ls)
