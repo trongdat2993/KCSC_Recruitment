@@ -27,7 +27,7 @@ print(f"{ct=}")
 # ct='2V9VnRcNosvgMo4RoVfThg8osNjo0G}mmqmp'
 ```
 
-Hàm trên sử dụng phương pháp mã hoá Ceasar. Đây là một dạng mật mã thay thế, trong đó mỗi ký tự trên văn bản thô sẽ được thay bằng một ký tự khác có vị trí cách nó 1 khoảng xác định, trong bài này đã có sự thay đổi trong khi đã xóa đi 3 ký tự bất kỳ trong bảng chữ cái  ```abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!{_}?```, nên đầu tiên ta phải tập các alplabet có thể xảy ra sau đó sử dụng vòng lặp để thử các trường hợp và các khóa. Nếu plaintext có "KCSC{" và có độ dài bằng ciphertext thì ta thêm vào mảng. Cuối cùng ta lọc các giá trị trùng nhau và tìm được flag.
+Hàm trên sử dụng phương pháp mã hoá Ceasar. Đây là một dạng mật mã thay thế, trong đó mỗi ký tự trên văn bản thô sẽ được thay bằng một ký tự khác có vị trí cách nó 1 khoảng xác định, trong bài này đã có sự thay đổi trong khi đã xóa đi 3 ký tự bất kỳ trong bảng chữ cái  ```abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!{_}?```, nên đầu tiên ta phải tập các alplabet có thể xảy ra sau đó sử dụng vòng lặp để thử các trường hợp và các khóa. Nếu plaintext có "KCSC{" và có độ dài bằng ciphertext thì ta in ra màn hinh. Nhận thấy có nhiều giá trị có 'KCSC{y0u_be4t_My_C3A54R' nên ta lọc tiếp và thêm vào mảng . Cuối cùng ta lọc các giá trị trùng nhau và tìm được flag.
 
 Từ đây mình suy ra script giải bài:
 
@@ -58,7 +58,7 @@ for i in lsAlphabet:
             if  k not in i:
                 break   
             pt += (i[(i.index(k) - j) % len(i)])
-        if 'KCSC{y0u_be4t_My_C3A5' in pt and len(pt) == len(ct):
+        if 'KCSC{y0u_be4t_My_C3A54R' in pt and len(pt) == len(ct):
             ls.append(pt)
 
 flag = set(ls)
