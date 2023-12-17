@@ -6,4 +6,4 @@ Phần 2: ```for_the_```
 
 Phần 3: ```pwners_0xdeadbeef}```
 
-falg: ```KCSC{A_gift_for_the_pwners_0xdeadbeef}```
+flag: ```KCSC{A_gift_for_the_pwners_0xdeadbeef}```
