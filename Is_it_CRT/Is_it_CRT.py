@@ -12,11 +12,7 @@ n1_2 = gcd(n1, n2)
 n1_3 = gcd(n1, n3)
 n2_3 = gcd(n2, n3)
 
-p1 = n1 // n1_2
-p2 = n3 // n1_3
-p3 = n1 // n1_3
-
-phi = (p1-1)*(p2-1)*(p3-1)
+phi = (n1_2-1)*(n1_3-1)*(n2_3-1)
 d = inverse(e, phi)
 print(long_to_bytes(pow(c1, d, n1)))
  
