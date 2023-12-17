@@ -30,4 +30,4 @@ for i in lsAlphabet:
 flag = set(ls)
 print(flag)
 
-flag = [{'KCSC{y0u_be4t_My_C3A54R_bu7_InW!!?!}', 'KCSC{y0u_be4t_My_C3A54R_bu7_IoW!!?!}', 'KCSC{y0u_be4t_My_C3A54R_bu7_HoW!!?!}'}]
+flag = 'KCSC{y0u_be4t_My_C3A54R_bu7_HoW!!?!}'
